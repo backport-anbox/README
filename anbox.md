@@ -20,7 +20,7 @@ https://gitee.com/anbox/anbox-headless 支持非 SDL 显示输出以提高显示
 
 xdroid 不承认是基于 anbox，群里提 anbox 会被踢，提供 gles3 支持： https://www.linzhuotech.com
 
-有反编译过其中一个依赖库文件libxdroid-share.so，可以看出很多类和函数是重命名把所有 anbox 改成了 xdroid，类名，函数名，错误信息以及调试输出信息。也把其中的几个简单脚本搞成了加密的非脚本语言实现。
+有反编译过其中一个依赖库文件libxdroid-share.so，可以看出类和函数是重命名把所有 anbox 改成了 xdroid，类名，函数名，错误信息以及调试输出信息。也把其中的几个简单脚本搞成了加密的非脚本语言实现。
 
 不过由于anbox核心编译后非常小，非静态编译结果仅几兆，这个重命名anbox的依赖库文件仅占xdroid打包程序（接近 1G 文件，主程序 + 各种依赖库 +android.img）中的极小部分，xdroid 为 anbox 做了个好用的管理工具，软件仓库工具，用 qt 做的。这个很小的 so 也是 xdroid 的核心所在。
 
